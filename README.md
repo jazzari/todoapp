@@ -31,10 +31,18 @@ Find the id of the object and assign the object to a instance variable
 
 For an Edit Action:
 Using a form to edit an existing object
+Find the object to be edited by the user
 Then submits to update -> hits the database with patch or gives an error
+
+For an Update Action:
+Using params for the form in Edit action
 - first find the existing object to be edited
 - similar to create action, but using update
 - if an error occur then redirect to edit action
+
+For a list of all object (Index Action)
+Puts all the objects in an instance variable
+- @todos = Todo.all
 
 
 STRONG PARAMETERS:
@@ -53,6 +61,8 @@ submits to create - hits the database o gives an error
 
 SHOW - shows a particular object saved in the database
 Display the object using the instance variable 
+
+INDEX - shows all the objects in the database
 
 
 FLASH (show "temporary" messages to the user)
