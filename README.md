@@ -23,13 +23,18 @@ save the object in the database:
 - flash notification
 redirect to show the new saved object: (if it's saved)
 - redirect_to todo_path(@todo) # (@todo) gives the :id
-redirect to new view (if an error occurs and it's not saved)
+redirect to new action (if an error occurs and it's not saved)
 
 For a Show Action:
 Find the id of the object and assign the object to a instance variable
 - @todo = Todo.find(params[:id])
 
 For an Edit Action:
+Using a form to edit an existing object
+Then submits to update -> hits the database with patch or gives an error
+- first find the existing object to be edited
+- similar to create action, but using update
+- if an error occur then redirect to edit action
 
 
 STRONG PARAMETERS:
@@ -52,5 +57,5 @@ Display the object using the instance variable
 
 FLASH (show "temporary" messages to the user)
 FLASH is a hash, and I can put messages in a flash (in the controller's action)
-Then I can display that messages (in the corresponding view or in a layout)
+Then I can display that messages (in the corresponding view or in the  layout)
 
