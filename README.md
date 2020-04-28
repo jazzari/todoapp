@@ -76,6 +76,11 @@ INDEX - shows all the objects in the database
 
 EDIT - form to edit the object and submit the update
 
+Refactoring Code:
+Using Parcials: (/layouts/_messages.html.erb)
+To clean up the layout and views
+Using before_actions in controllers (todos_controller)
+
 
 FLASH (show "temporary" messages to the user)
 FLASH is a hash, and I can put messages in a flash (in the controller's action)
