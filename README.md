@@ -1,4 +1,6 @@
 
+CRUD FOR THE UI:
+
 Routes (/config/routes.rb)
 Restful routes
 - resources :todos 
@@ -44,6 +46,14 @@ For a list of all object (Index Action)
 Puts all the objects in an instance variable
 - @todos = Todo.all
 
+For Delete an object (Destroy)
+Find the id of the object and assign the object to a instance variable
+- @todo = Todo.find(params[:id])
+Call the destroy method
+- @todo.destroy
+Notify the user that the object was deleted (flash[:notice])
+- redirect to index (todos_path)
+
 
 STRONG PARAMETERS:
 In the "private" section define a method colled "todo_params" that require
@@ -64,8 +74,10 @@ Display the object using the instance variable
 
 INDEX - shows all the objects in the database
 
+EDIT - form to edit the object and submit the update
+
 
 FLASH (show "temporary" messages to the user)
 FLASH is a hash, and I can put messages in a flash (in the controller's action)
 Then I can display that messages (in the corresponding view or in the  layout)
-
+--------------------------------------------------------------------------------
