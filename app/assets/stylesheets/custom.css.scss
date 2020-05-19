@@ -1,0 +1,30 @@
+@import 'bootstrap/dist/css/bootstrap';
+
+/* FOOTER */
+
+.card-footer a {
+	color: #000;
+	text-decoration: none;
+}
+.card-footer a:hover {
+	color: #dadadd;
+}
+
+/* MAIN */
+
+.card {
+	padding: 5px 25px;
+}
+.card a {
+	color: #000;
+	text-decoration: none;
+}
+.card a:hover {
+    color: #b6b5b9;
+}
+.colormatch  {
+	color: #000;
+	margin: 0 10px;
+	text-decoration: none;
+}
+

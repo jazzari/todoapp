@@ -1,25 +1,22 @@
-<h1>Listing all Todos</h1>
+<%= render 'shared/page_title', title: "listing all Todos" %>
 
-<p>
-	<%= link_to 'Create a Todo', new_todo_path %>
-</p>
+<% @todos.each do |todo| %>
+  <div class="row">
+    <div col-md-2>
+      <div class="card">
+        <%= image_tag "check.png", size: "75x75" %>
+      </div>
+    </div>
+    <div class="col-md-8 card bg-light">
+      <h4><%= link_to todo.name, todo_path(todo) %></h4>
+      <p><%= truncate(todo.description, length: 150) %></p>
+    </div>
+  </div>
+<% end %>
+<div class="text-center card">
+  <p>
+	  <%= link_to 'Create a Todo', new_todo_path, class: "btn btn-lg btn-outline-info" %>
+  </p>
+</div>
 
-<table>
-	<tr>
-		<th>Name</th>
-		<th>Description</th>
-	</tr>
-
-	<% @todos.each do |todo| %>
-      <tr>
-  	    <td><%= todo.name %></td>
-  	    <td><%= todo.description %></td>
-  	    <td><%= link_to 'Edit', edit_todo_path(todo) %></td>
-        <td><%= link_to 'Show', todo_path(todo) %></td>
-        <td><%= link_to 'Delete', todo_path(todo), method: :delete,
-             data: {confirm: "Are you sure?"} %></td>
-      </tr>
-    <% end %>
-
-</table>
 

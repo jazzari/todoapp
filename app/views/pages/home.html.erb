@@ -1,4 +1,16 @@
-<h1>Hello World!</h1>
+<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
 
+  <main role="main" class="inner cover">
+    <div class="card border-light">
+      <div class="text-center">  
+        <%= image_tag "background-image.jpg", size: "800x400", class: "center" %>
+      </div>
+    </div>
+    <h1 class="cover-heading text-center">Welcome to Todo App</h1>
+    <p class="lead text-center">Todo is a multi-purpose to-do lists website. This app is part of a tutorial course to learn create applications using Ruby on Rails.</p>
+    <p class="lead text-center">
+      <%= link_to "View All Todos", todos_path, class: "btn btn-lg btn-outline-info" %>
+    </p>
+  </main>
 
-<h2>This is a test</h2>
+</div>
